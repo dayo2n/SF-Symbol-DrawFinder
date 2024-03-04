@@ -13,5 +13,6 @@ struct SF_Symbol_FinderApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowResizabilityContentSize()
     }
 }

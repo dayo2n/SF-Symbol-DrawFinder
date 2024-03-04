@@ -10,11 +10,6 @@ import CoreML
 import Vision
 
 struct ContentView: View {
-    
-    struct Result: Hashable {
-        let label: String
-        let confidence: Int
-    }
     @State private var isClear = false
     @State private var canvasView: CanvasRepresentingView?
     @Environment(\.undoManager) var undoManager
@@ -28,61 +23,6 @@ struct ContentView: View {
         ZStack {
             VStack {
                 HStack(spacing: 30) {
-                    ZStack {
-                        canvasView
-                        HStack {
-                            if let undoManager = undoManager {
-                                VStack {
-                                    HStack(spacing: 20) {
-                                        Button {
-                                            undoManager.undo()
-                                        } label: {
-                                            Image(systemName: "arrow.uturn.backward")
-                                                .font(.title2)
-                                                .bold()
-                                        }
-                                        .keyboardShortcut("z", modifiers: .command)
-                                        .buttonStyle(BorderedButtonStyle())
-                                        Button {
-                                            undoManager.redo()
-                                        } label: {
-                                            Image(systemName: "arrow.uturn.forward")
-                                                .font(.title2)
-                                                .bold()
-                                        }
-                                        .keyboardShortcut("z", modifiers: [.command, .shift])
-                                        .buttonStyle(BorderedButtonStyle())
-                                    }
-                                    Spacer()
-                                }
-                                .padding()
-                            }
-                            Spacer()
-                            VStack {
-                                Spacer()
-                                .padding()
-                                Button("CLEAR") {
-                                    isClear.toggle()
-                                }
-                                .buttonStyle(BorderedButtonStyle())
-                                Button("SEARCH") {
-                                    if let canvasView = canvasView {
-                                        let uiImage = canvasView.getRenderedImage()
-                                        if let ciImage = CIImage(image: uiImage) {
-                                            predict(image: ciImage)
-                                        } else {
-                                            self.showErrorAlert = true
-                                        }
-                                    } else {
-                                        self.showErrorAlert = true
-                                    }
-                                }
-                                .buttonStyle(BorderedProminentButtonStyle())
-                                .padding([.bottom, .trailing])
-                            }
-                        }
-                    }
-                    .frame(width: 700)
                     NavigationView {
                         ZStack {
                             Color.neutral
