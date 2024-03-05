@@ -15,8 +15,4 @@ extension Color {
             self.init(red: red, green: green, blue: blue, opacity: alpha)
     }
     static let neutral = Color(hex: 0x191919)
-    static let primary50 = Color(hex: 0xE2CAFF)
-    static let primary100 = Color(hex: 0xCFA8FF)
-    static let primary300 = Color(hex: 0xB77DFF)
-    static let primary500 = Color(hex: 0x9F51FF)
 }

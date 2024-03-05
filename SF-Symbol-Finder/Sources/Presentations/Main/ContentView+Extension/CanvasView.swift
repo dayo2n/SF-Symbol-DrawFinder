@@ -63,6 +63,6 @@ extension ContentView {
                 }
             }
         }
-        .frame(width: 700)
+        .border(.white)
     }
 }

@@ -18,6 +18,7 @@ struct CanvasRepresentingView: UIViewRepresentable {
         canvas.backgroundColor = UIColor(Color.neutral)
         let isDark = colorScheme == .dark
         canvas.tool = PKInkingTool(.pencil, color: isDark ? .black : .white, width: 20)
+        canvas.drawingPolicy = .anyInput
         return canvas
     }
 

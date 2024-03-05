@@ -22,12 +22,12 @@ struct SFSymbolListView: View {
                 VStack {
                     Text("Click to copy the name to the clipboard")
                         .font(.headline)
-                        .foregroundStyle(Color.primary100)
+                        .foregroundStyle(Color.accentColor)
                     LazyVGrid(columns: [GridItem()]) {
                         ForEach(systemNames, id: \.self) { systemName in
                             ZStack {
                                 Rectangle()
-                                    .stroke(Color.primary100, lineWidth: 0.5)
+                                    .stroke(Color.accentColor, lineWidth: 0.5)
                                     .background(Color.neutral)
                                 HStack(spacing: 10) {
                                     Image(systemName: systemName)

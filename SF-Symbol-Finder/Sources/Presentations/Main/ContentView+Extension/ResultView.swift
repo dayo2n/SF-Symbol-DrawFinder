@@ -16,7 +16,7 @@ extension ContentView {
                     Text("You can search with the keyword below\nPress the button to see if there's a symbol you're looking for")
                         .multilineTextAlignment(.center)
                         .font(.headline)
-                        .foregroundStyle(Color.primary100)
+                        .foregroundStyle(Color.accentColor)
                         .padding()
                     Spacer()
                     NavigationLink(
@@ -40,7 +40,6 @@ extension ContentView {
                                     .font(.callout)
                                     .foregroundStyle(.white.opacity(0.8))
                             }
-                            .frame(width: 350)
                         }
                         .padding(2)
                         .buttonStyle(BorderedButtonStyle())
@@ -52,6 +51,6 @@ extension ContentView {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .frame(width: 450)
+        .border(.white)
     }
 }
