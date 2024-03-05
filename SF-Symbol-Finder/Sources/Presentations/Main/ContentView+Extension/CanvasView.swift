@@ -18,7 +18,7 @@ extension ContentView {
                             Button {
                                 undoManager.undo()
                             } label: {
-                                Image(systemName: "arrow.uturn.backward")
+                                Image(systemName: .arrowUturnBackward)
                                     .font(.title2)
                                     .bold()
                             }
@@ -27,7 +27,7 @@ extension ContentView {
                             Button {
                                 undoManager.redo()
                             } label: {
-                                Image(systemName: "arrow.uturn.forward")
+                                Image(systemName: .arrowUturnForward)
                                     .font(.title2)
                                     .bold()
                             }
@@ -41,12 +41,11 @@ extension ContentView {
                 Spacer()
                 VStack {
                     Spacer()
-                    .padding()
-                    Button("CLEAR") {
+                    Button(String.buttonClear) {
                         isClear.toggle()
                     }
                     .buttonStyle(BorderedButtonStyle())
-                    Button("SEARCH") {
+                    Button(String.buttonSearch) {
                         if let canvasRepresentingView = canvasRepresentingView {
                             let uiImage = canvasRepresentingView.getRenderedImage()
                             if let ciImage = CIImage(image: uiImage) {
@@ -59,8 +58,8 @@ extension ContentView {
                         }
                     }
                     .buttonStyle(BorderedProminentButtonStyle())
-                    .padding([.bottom, .trailing])
                 }
+                .padding([.bottom, .trailing])
             }
         }
         .border(.white)

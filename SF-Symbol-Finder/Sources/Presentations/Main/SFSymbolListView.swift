@@ -20,7 +20,7 @@ struct SFSymbolListView: View {
             Color.neutral
             ScrollView {
                 VStack {
-                    Text("Click to copy the name to the clipboard")
+                    Text(String.guideOnClickToCopy)
                         .font(.headline)
                         .foregroundStyle(Color.accentColor)
                     LazyVGrid(columns: [GridItem()]) {
@@ -64,7 +64,7 @@ struct SFSymbolListView: View {
                         Button {
                             dismiss()
                         } label: {
-                            Image(systemName: "chevron.backward")
+                            Image(systemName: .chevronBackward)
                                 .font(.headline)
                                 .fontWeight(.bold)
                                 .foregroundStyle(Color.accentColor)
@@ -84,10 +84,10 @@ struct SFSymbolListView: View {
                     .opacity(0.7)
                     .ignoresSafeArea()
                 HStack(spacing: 10) {
-                    Image(systemName: "doc.on.clipboard")
+                    Image(systemName: .docOnClipboard)
                         .font(.title3)
                         .foregroundStyle(.white)
-                    Text("Copied to clipboard")
+                    Text(String.alertCopied)
                         .font(.title3)
                         .foregroundStyle(.white)
                 }

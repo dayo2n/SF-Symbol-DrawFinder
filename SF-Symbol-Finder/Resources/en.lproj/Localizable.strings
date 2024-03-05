@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  SF-Symbol-Finder
+
+  Created by 제나 on 3/5/24.
+  
+*/
+
+/* App */
+"SFSymbolFinder" = "SF Symbol Finder";
+
+/* ContentView */
+"WaitingForResult" = "Draw a picture of the symbol you want to find on the drawing board\nand press the 'SEARCH' button to check the result.";
+"GuideOnUseResultList" = "You can search with the keyword below\nPress the button to see if there's a symbol you're looking for";
+"errorAlert" = "An error occured.\nPlease run the app again.";
+
+/* CnavasView */
+"ButtonClear" = "CLEAR";
+"ButtonSearch" = "SEARCH";
+
+/* ResultView */
+"confidence" = "confidence";
+
+/* SFSymbolListView*/
+"GuideOnClickToCopy" = "Click to copy the name to the clipboard";
+"AlertCopied" = "Copied to clipboard";

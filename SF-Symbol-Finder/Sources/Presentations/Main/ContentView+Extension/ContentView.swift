@@ -36,10 +36,10 @@ struct ContentView: View {
                 Color.black
                     .opacity(0.8)
                 VStack(spacing: 10) {
-                    Image(systemName: "exclamationmark.warninglight.fill")
+                    Image(systemName: .exclamationmarkWarninglightFill)
                         .font(.title)
                         .foregroundStyle(.white)
-                    Text("An error occured.\nPlease run the app again.")
+                    Text(String.errorAlert)
                         .font(.title2)
                         .bold()
                         .multilineTextAlignment(.center)

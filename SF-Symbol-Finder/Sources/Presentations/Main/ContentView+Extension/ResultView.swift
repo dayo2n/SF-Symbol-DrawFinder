@@ -13,7 +13,7 @@ extension ContentView {
             ZStack {
                 Color.neutral
                 VStack {
-                    Text("You can search with the keyword below\nPress the button to see if there's a symbol you're looking for")
+                    Text(results.isEmpty ? String.waitingForResult : .guideOnUseResultList)
                         .multilineTextAlignment(.center)
                         .font(.headline)
                         .foregroundStyle(Color.accentColor)
@@ -36,7 +36,7 @@ extension ContentView {
                                     .font(.callout)
                                     .bold()
                                     .foregroundStyle(.white)
-                                Text("confidence **\(result.confidence)**%")
+                                Text("\(String.confidence) **\(result.confidence)**%")
                                     .font(.callout)
                                     .foregroundStyle(.white.opacity(0.8))
                             }
