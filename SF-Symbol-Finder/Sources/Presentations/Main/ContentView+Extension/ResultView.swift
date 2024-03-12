@@ -43,7 +43,9 @@ extension ContentView {
                         }
                         .buttonStyle(BorderedButtonStyle())
                     }
-                    Spacer(minLength: 0)
+                    if results.isEmpty {
+                        Spacer(minLength: 0)
+                    }
                 }
                 .padding(10)
                 .background(Color.neutral)
