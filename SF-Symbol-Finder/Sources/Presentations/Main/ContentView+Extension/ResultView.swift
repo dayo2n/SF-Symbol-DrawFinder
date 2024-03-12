@@ -17,8 +17,8 @@ extension ContentView {
                         .multilineTextAlignment(.center)
                         .font(.headline)
                         .foregroundStyle(Color.accentColor)
-                        .padding()
-                    Spacer()
+                        .padding(5)
+                        .padding(.bottom)
                     NavigationLink(
                         destination: SFSymbolListView(keyword: selectedLabel)
                             .navigationTitle(selectedLabel),
@@ -41,12 +41,11 @@ extension ContentView {
                                     .foregroundStyle(.white.opacity(0.8))
                             }
                         }
-                        .padding(2)
                         .buttonStyle(BorderedButtonStyle())
                     }
-                    Spacer()
+                    Spacer(minLength: 0)
                 }
-                .padding()
+                .padding(10)
                 .background(Color.neutral)
             }
         }

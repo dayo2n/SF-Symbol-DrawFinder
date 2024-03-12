@@ -10,8 +10,8 @@
 "SFSymbolFinder" = "SF Symbol Finder";
 
 /* ContentView */
-"WaitingForResult" = "Draw a picture of the symbol you want to find on the drawing board\nand press the 'SEARCH' button to check the result.";
-"GuideOnUseResultList" = "You can search with the keyword below\nPress the button to see if there's a symbol you're looking for";
+"WaitingForResult" = "Draw a picture of the symbol you want to find on the drawing board and press the 'SEARCH' button to check the result.";
+"GuideOnUseResultList" = "You can search with the keyword below. Press the button to see if there's a symbol you're looking for.";
 "errorAlert" = "An error occured.\nPlease run the app again.";
 
 /* CnavasView */
