@@ -9,9 +9,11 @@ import SwiftUI
 
 struct SFSymbolListView: View {
     let keyword: String
+    private var keywordReplaced: String {
+        keyword.replacingOccurrences(of: "_", with: ".")
+    }
     private var systemNames: [String] {
-        let keyword = keyword.replacingOccurrences(of: "_", with: ".")
-        return Constants.sfsymbols.filter({ $0.contains(keyword)})
+        return Constants.sfsymbols.filter({ $0.contains(keywordReplaced)})
     }
     @State private var showClipboardAlert = false
     @Environment(\.dismiss) private var dismiss
@@ -55,7 +57,7 @@ struct SFSymbolListView: View {
                 ZStack {
                     HStack {
                         Spacer()
-                        Text(keyword)
+                        Text(keywordReplaced)
                             .foregroundStyle(Color.accentColor)
                             .font(.body)
                         Spacer()
