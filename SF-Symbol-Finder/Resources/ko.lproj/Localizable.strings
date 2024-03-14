@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  SF-Symbol-Finder
+
+  Created by 제나 on 3/5/24.
+  
+*/
+
+/* App */
+"SFSymbolFinder" = "SF Symbol Finder";
+
+/* ContentView */
+"WaitingForResult" = "그림판에 찾으려는 심볼의 그림을 그린 후,\n '검색' 버튼을 눌러 결과를 확인하세요.";
+"GuideOnUseResultList" = "아래의 키워드로 검색할 수 있을 것 같아요.\n찾고 있는 심볼이 있는지 보려면 버튼을 눌러 확인하세요.";
+"errorAlert" = "에러가 발생했어요.\n앱을 다시 실행해 주세요.";
+
+/* CnavasView */
+"ButtonClear" = "초기화";
+"ButtonSearch" = "검색";
+
+/* ResultView */
+"confidence" = "정확도";
+
+/* SFSymbolListView*/
+"GuideOnClickToCopy" = "클릭하여 클립보드에 심볼 이름을 복사할 수 있어요";
+"AlertCopied" = "클립보드에 복사되었어요";
