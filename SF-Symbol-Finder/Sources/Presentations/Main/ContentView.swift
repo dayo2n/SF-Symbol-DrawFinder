@@ -64,9 +64,15 @@ struct ContentView: View {
         VStack {
             Spacer()
             HStack {
+                #if DEBUG
+                canvasView
+                    .padding(.leading, defaultPadding)
+                    .frame(maxWidth: 1000, maxHeight: 1000)
+                #elseif RELEASE
                 canvasView
                     .padding(.leading, defaultPadding)
                     .frame(maxWidth: 500, maxHeight: 500)
+                #endif
                 resultView
                     .padding(.trailing, defaultPadding)
                     .frame(maxWidth: 500, maxHeight: 500)
@@ -78,9 +84,15 @@ struct ContentView: View {
     
     private var contentsInVStack: some View {
         VStack {
+            #if DEBUG
+            canvasView
+                .padding(.top, defaultPadding)
+                .frame(maxWidth: 1000, maxHeight: 1000)
+            #elseif RELEASE
             canvasView
                 .padding(.top, defaultPadding)
                 .frame(maxWidth: 500, maxHeight: 500)
+            #endif
             resultView
                 .padding(.bottom, defaultPadding)
                 .frame(maxWidth: 500, maxHeight: 800)
